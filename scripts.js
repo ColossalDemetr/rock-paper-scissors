@@ -55,12 +55,42 @@ function playRound(humanChoice, computerChoice) {
     ) {
         console.log(`You win! ${humanChoice} beats ${computerChoice}`);
         humanScore++;
+    } else {
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+        computerScore++;
     }
 
     console.log(`You chose ${humanChoice}`);
     console.log(`Computer chose ${computerChoice}`);
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-playRound(humanSelection, computerSelection);
+/*
+STEP SIX: playGame — 5 rounds
+*/
+function playGame() {
+    // Score reset at the start
+    humanScore = 0;
+    computerScore = 0;
+
+    // 5 rounds
+    for (let i = 1; i <= 5; i++) {
+        console.log(`--- Round ${i} ---`);
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        playRound(humanSelection, computerSelection);
+        console.log(`Score — You: ${humanScore}, Computer: ${computerScore}`);
+    }
+
+    // The winner is?
+    console.log(`=== GAME OVER ===`);
+    if (humanScore > computerScore) {
+        console.log(`You won the game! Final score: ${humanScore} vs ${computerScore}`);
+    } else if (computerScore > humanScore) {
+        console.log(`Computer won the game! Final score: ${computerScore} vs ${humanScore}`);
+    } else {
+        console.log(`The game is a tie! Final score: ${humanScore} vs ${computerScore}`);
+    }
+}
+
+// Get the game rolling
+playGame();
