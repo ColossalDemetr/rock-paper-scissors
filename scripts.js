@@ -31,3 +31,10 @@ function getHumanChoice(){
     const userPrompt = prompt('What you choosing: rock, paper, scissors?');
     return userPrompt;
 }
+
+/*
+STEP FOUR
+*/
+
+let humanScore = 0;
+let computerScore = 0;
