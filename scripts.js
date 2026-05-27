@@ -44,6 +44,19 @@ STEP FIVE
 */
 
 function playRound(humanChoice, computerChoice) {
+    humanChoice = humanChoice.toLowerCase();
+
+    if (humanChoice === computerChoice) {
+        console.log(`It's a tie! Both chose ${humanChoice}`);
+    } else if (
+        (humanChoice === "rock" && computerChoice === "scissors") || 
+        (humanChoice === "paper" && computerChoice === "rock") || 
+        (humanChoice === "scissors" && computerChoice === "paper")
+    ) {
+        console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+        humanScore++;
+    }
+
     console.log(`You chose ${humanChoice}`);
     console.log(`Computer chose ${computerChoice}`);
 }
