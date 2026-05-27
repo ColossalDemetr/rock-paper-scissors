@@ -20,8 +20,14 @@ function getComputerChoice(){
     }
 }
 
-console.log(getComputerChoice());
-console.log(getComputerChoice());
-console.log(getComputerChoice());
-console.log(getComputerChoice());
-console.log(getComputerChoice());
+/* 
+STEP TWO:    
+    1. Create a function getHumanChoice (no para)
+    2. Ask the user WTF does he wants?
+    3. Give it to him back(return)
+*/
+
+function getHumanChoice(){
+    const userPrompt = prompt('What you choosing: rock, paper, scissors?');
+    return userPrompt;
+}
