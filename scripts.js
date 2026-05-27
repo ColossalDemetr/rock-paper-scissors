@@ -38,3 +38,16 @@ STEP FOUR
 
 let humanScore = 0;
 let computerScore = 0;
+
+/*
+STEP FIVE
+*/
+
+function playRound(humanChoice, computerChoice) {
+    console.log(`You chose ${humanChoice}`);
+    console.log(`Computer chose ${computerChoice}`);
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+playRound(humanSelection, computerSelection);
